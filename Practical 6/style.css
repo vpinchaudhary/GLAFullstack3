@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(238, 238, 238);
+  font-family: 'Gruppo', cursive;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 5rem 3rem;
+}
+
+.container__card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background-color: #fff;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  transition: transform 200ms;
+  box-shadow: 3px 2px 4px 3px rgba(63, 63, 63, 0.596);
+}
+
+.container__card-blur {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, white 40%, transparent);
+  bottom: 0;
+  left: 0;
+}
+
+.container__card-para {
+  height: 75px;
+  overflow: hidden;
+}
+
+.container__card-link {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 3px solid rgb(98, 0, 255);
+  border-radius: 15px;
+}
+
+.container__card:hover {
+  transform: scale(1.05);
+  transition: 200ms ease-in;
+}
+
+.container__card-link:hover {
+  background-color: rgb(98, 0, 255);
+  color: #fff;
+  transition: 250ms linear;
+}
+.container__card-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.container__card-image {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 793px) {
+  .container {
+    padding: 40px 10px;
+  }
+
+  .container__card {
+    transform: none !important;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
