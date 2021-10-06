@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+thead {
+  color: purple;
+}
+main {
+  background-color: #c9c9c9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planTable {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+caption {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+table {
+  margin: 10px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td {
+  font-size: 1.5rem;
+  border: white 1px solid;
+  padding: 10px 5px;
+}
+
+td:nth-child(1) {
+  background-color: rgba(151, 255, 91, 1);
+}
+td:nth-child(2) {
+  background-color: rgba(25, 218, 25, 1);
+}
+td:nth-child(3) {
+  background-color: rgba(28, 230, 169, 1);
+}
+td:nth-child(4) {
+  background-color: rgba(106, 255, 223, 1);
+}
+
+tr:nth-child(even) :nth-child(1) {
+  background-color: rgba(151, 255, 91, 0.5);
+}
+
+tr:nth-child(even) :nth-child(2) {
+  background-color: rgba(25, 218, 25, 0.5);
+}
+
+tr:nth-child(even) :nth-child(3) {
+  background-color: rgba(28, 230, 169, 0.5);
+}
+
+tr:nth-child(even) :nth-child(4) {
+  background-color: rgba(106, 255, 223, 0.5);
+}
+
+tr:last-child .btn {
+  background-color: purple;
+  padding: 10px 15px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.planPrice td {
+  color: green;
+}
+
+tr:last-child .btn:hover {
+  background-color: red;
+}
