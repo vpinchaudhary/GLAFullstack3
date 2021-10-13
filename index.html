@@ -2,104 +2,279 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vipin Chaudhary</title>
+    <title>Customize Tables</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <style>
-      .practical {
-        color: white;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+      }
+      .loader {
+        position: absolute;
+        top: calc(50% - 60px);
+        left: calc(50% - 60px);
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      caption {
+        caption-side: bottom;
+        margin-top: 10px;
+        color: grey;
+        text-align: center;
+      }
+
+      table {
+        text-align: left;
+        line-height: 20px;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 2px solid #34495e;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 5px;
+      }
+
+      thead tr:first-child {
+        background: #34495e;
+        color: #fff;
+        border: none;
+        line-height: 40px;
+      }
+      thead tr th:last-child {
+        text-align: center;
+        line-height: 40px;
+      }
+      thead tr th:nth-child(3) {
+        padding-left: 20px;
+      }
+
+      th:first-child,
+      td:first-child {
+        padding: 0 15px 0 20px;
+      }
+
+      th {
+        font-weight: bold;
+      }
+
+      thead tr:last-child th {
+        border-bottom: 3px solid #ddd;
+      }
+
+      tbody tr:hover {
+        background-color: #f2f2f2;
+        cursor: default;
+      }
+
+      tbody tr:last-child td {
+        border: none;
+      }
+      tbody tr td:nth-child(1) {
+        width: 50px;
+      }
+      tbody tr td:nth-child(2) {
+        width: 500px;
+        padding-right: 10px;
+      }
+      tbody tr td:nth-child(3) {
+        padding-left: 10px;
+      }
+
+      tbody td {
+        border-bottom: 1px solid #ddd;
+        height: 50px;
+      }
+
+      td:last-child {
+        text-align: center;
+      }
+
+      .button {
+        color: #aaa;
+        cursor: pointer;
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+
+      .edit:hover {
+        color: #0a79df;
+      }
+
+      .delete:hover {
+        color: #dc2a2a;
+      }
+      td.deliver {
+        color: green;
+      }
+      td.pending {
+        color: red;
+      }
+      a {
         text-decoration: none;
-        font-size: 2rem;
-        font-weight: 700;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-        border: 1px black solid;
-        border-radius: 15px;
-        padding: 10px;
+        color: grey;
       }
-      .practical:hover {
-        background-color: rgb(102, 102, 102);
-      }
-
-      .box {
-        background: #ffe748;
-        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.637);
-        border-radius: 15px;
-        padding: 35px;
-        margin: 35px;
+      a:hover {
+        color: blue;
       }
     </style>
   </head>
-  <body
-    style="
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #fded87;
-    "
-  >
-    <header
-      style="
-        background-color: #fbdc04;
-        box-shadow: -3px 1px 8px rgba(0, 0, 0, 0.637);
-      "
-    >
-      <img
-        src="./assets/logo.jpg"
-        alt="Vipin Chaudhary"
-        style="width: 70px; height: 70px; object-fit: cover"
-      />
-    </header>
-    <div style="background-color: black; display: flex; padding: 10px 0"></div>
-    <main
-      style="
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-      "
-    >
-      <div class="box">
-        <a href="./Practical1/Practical1.html" class="practical">Practical 1</a>
-      </div>
-      <div class="box">
-        <a href="./Practical2/Practical2.html" class="practical">Practical 2</a>
-      </div>
-      <div class="box">
-        <a href="./Practical3/Practical3.html" class="practical">Practical 3</a>
-      </div>
-      <div class="box">
-        <a href="./Practical4/Practical4.html" class="practical">Practical 4</a>
-      </div>
-      <div class="box">
-        <a href="./Practical5/Practical5.html" class="practical">Practical 5</a>
-      </div>
-      <div class="box">
-        <a href="./Practical6/Practical6.html" class="practical">Practical 6</a>
-      </div>
-      <div class="box">
-        <a href="./Practical7/Practical7.html" class="practical">Practical 7</a>
-      </div>
-      <div class="box">
-        <a href="./Practical8/Practical8.html" class="practical">Practical 8</a>
-      </div>
-      <div class="box">
-        <a href="./Practical9/practical9.html" class="practical">Practical 9</a>
-      </div>
-      <div class="box">
-        <a href="./Practical10/practical8.html" class="practical"
-          >Practical 10</a
-        >
-      </div>
-      <div class="box">
-        <a href="./Practical12/Practical12.html" class="practical"
-          >Practical 12</a
-        >
-      </div>
-      <div class="box">
-        <a href="./Practical13/" class="practical">Practical 13</a>
-      </div>
-    </main>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="5">Fullstack Live Practical Book</th>
+        </tr>
+        <tr>
+          <th>#</th>
+          <th>Practical Name</th>
+          <th>Link</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Create a Web page including HTML basic skeleton</td>
+          <td class="deliver">
+            <a href="./Practical1/Practical1.html">Practical-1</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Live your First Web-Page on Git-Hub.</td>
+          <td class="deliver">
+            <a href="./Practical2/Practical2.html">Practical-2</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            Create a web page showing a basic html structure using character
+            Entities and span Tag.
+          </td>
+          <td class="deliver">
+            <a href="./Practical3/Practical3.html">Practical-3</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            Create a website having list of all practical and their individual
+            practical Page links
+          </td>
+          <td class="deliver">
+            <a href="./Practical4/Practical4.html">Practical-4</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            Create a Web-Page showing the use of Image-Map in the Web
+            Application.
+          </td>
+          <td class="deliver">
+            <a href="./Practical5/Practical5.html">Practical-5</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Create a Card Layout using CSS layout properties.</td>
+          <td class="deliver">
+            <a href="./Practical6/Practical6.html">Practical-6</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Create a Web Page Layout using div tags.</td>
+          <td class="deliver">
+            <a href="./Practical7/Practical7.html">Practical-7</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            Create a Web Page having Fixed Navigation Bar with the given
+            content.
+          </td>
+          <td class="deliver">
+            <a href="./Practical8/Practical8.html">Practical-8</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            Create a Responsive Web Layout with Responsive Navigation Bar.
+          </td>
+          <td class="deliver">
+            <a href="./Practical9/practical9.html">Practical-9</a>
+          </td>
+          <td class="deliver">Checked</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Create a Responsive Side-Bar Navigation Menu.</td>
+          <td class="deliver">
+            <a href="./Practical10/practical8.html">Practical-10</a>
+          </td>
+          <td style="color: green">Checked</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Create a Responsive Practical Table.</td>
+          <td class="deliver">
+            <a href="#">Practical-13</a>
+          </td>
+          <td style="color: green">Checked</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Create a Counter.</td>
+          <td class="deliver">
+            <a href="./Practical14">Practical-14</a>
+          </td>
+          <td style="color: green">Checked</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
+  <script>
+    var loading = '<div class="loader"></div>'
+    var realData = document.getElementsByTagName('body')[0].innerHTML
+    document.getElementsByTagName('body')[0].innerHTML = loading
+    setTimeout(function () {
+      document.getElementsByTagName('body')[0].innerHTML = realData
+    }, 3000)
+  </script>
 </html>
